@@ -17,8 +17,9 @@ body {
   /* margin: 7rem auto; */
   padding: 12rem 0;
   text-align: center;
-  background-image: url(https://cdn.realsport101.com/images/ncavvykf/realsport-production/4ef1fbda64e7a89fd3645ee8c2ea23630b403901-1280x720.png?rect=0,0,1279,720&w=700&h=394&dpr=2);
-  animation: change 100s infinite ease-in-out;
+  /* background-image: url(https://cdn.realsport101.com/images/ncavvykf/realsport-production/4ef1fbda64e7a89fd3645ee8c2ea23630b403901-1280x720.png?rect=0,0,1279,720&w=700&h=394&dpr=2);
+  animation: change 100s infinite ease-in-out; */
+  background-color: blue;
   -webkit-text-stroke: 1.5px black;
 }
 
@@ -67,7 +68,7 @@ input {
 }
 
 
-@keyframes change {
+/* @keyframes change {
   0%
   {
       background-image: url(https://image.api.playstation.com/vulcan/img/rnd/202111/0822/YiFF5Xkljek03HhUJa4gic1Y.png);
@@ -88,7 +89,7 @@ input {
   {
       background-image: url(https://image.api.playstation.com/vulcan/ap/rnd/202107/3100/HO8vkO9pfXhwbHi5WHECQJdN.png);
   }
-}
+} */
 
 
 @media screen and (min-width:600px) and (max-width:1400px){      /* 1500 or 1600 ore 1800 */
