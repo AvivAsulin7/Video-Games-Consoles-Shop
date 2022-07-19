@@ -1,12 +1,10 @@
-import React, { useContext } from "react";
-import { AppBar, Toolbar, Tabs, Typography, Tab, Button } from "@mui/material";
-import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
+import React from "react";
+import { AppBar, Toolbar, Tabs, Tab } from "@mui/material";
 import CustomizedBadges from "./CustomizedBadges";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/system";
 import "./Navbar.css";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
-import ProductsContext from "../../contexts/ProductsContext";
 
 const CustomLink = styled(Link)({
   color: "#fff",
@@ -18,7 +16,6 @@ const CustomLink = styled(Link)({
 });
 
 function Navbar() {
-  const { showCart } = useContext(ProductsContext);
   return (
     <AppBar sx={{ background: "#040303" }}>
       <Toolbar>

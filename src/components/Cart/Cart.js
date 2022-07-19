@@ -1,5 +1,12 @@
-import { Drawer, Box, Avatar, Typography, Divider, Button } from "@mui/material";
-import { useContext, useState } from "react";
+import {
+  Drawer,
+  Box,
+  Avatar,
+  Typography,
+  Divider,
+  Button,
+} from "@mui/material";
+import { useContext } from "react";
 import ProductsContext from "../../contexts/ProductsContext";
 import styled from "styled-components";
 
@@ -9,8 +16,16 @@ const CustomButton = styled(Button)({
 });
 
 function Cart() {
-  const { productsCart, setProductsCart, cart, setCart, showCart, setShowCart, totalPrice, setTotalPrice } =
-    useContext(ProductsContext);
+  const {
+    productsCart,
+    setProductsCart,
+    cart,
+    setCart,
+    showCart,
+    setShowCart,
+    totalPrice,
+    setTotalPrice,
+  } = useContext(ProductsContext);
 
   function removeProduct(item) {
     setCart(cart - 1);
@@ -19,7 +34,12 @@ function Cart() {
   }
 
   return (
-    <Drawer open={showCart} onClose={() => setShowCart(false)} anchor="right" PaperProps={{ sx: { width: 500 } }}>
+    <Drawer
+      open={showCart}
+      onClose={() => setShowCart(false)}
+      anchor="right"
+      PaperProps={{ sx: { width: 500 } }}
+    >
       <Box
         sx={{ p: 4 }}
         // display="flex"
@@ -48,7 +68,10 @@ function Cart() {
                 justifyContent={"space-between"}
                 padding="10px"
               >
-                <Avatar src={item.img} sx={{ width: 96, height: 96, mr: 2 }}></Avatar>
+                <Avatar
+                  src={item.img}
+                  sx={{ width: 96, height: 96, mr: 2 }}
+                ></Avatar>
                 <Box display="flex" flexDirection={"column"}>
                   <Typography variant="h6">{item.name}</Typography>
                   {item.console === "all" ? (

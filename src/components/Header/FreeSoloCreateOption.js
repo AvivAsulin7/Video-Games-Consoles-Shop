@@ -1,7 +1,6 @@
 import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
-import { useState } from "react";
 import { useContext } from "react";
 import ProductsContext from "../../contexts/ProductsContext";
 
@@ -9,7 +8,6 @@ const filter = createFilterOptions();
 
 export default function FreeSoloCreateOption(props) {
   const [value, setValue] = React.useState(null);
-  const [x, setX] = useState(0);
   const { products, filterProduct } = useContext(ProductsContext);
 
   return (

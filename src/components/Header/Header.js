@@ -2,7 +2,6 @@ import React from "react";
 import "./Header.css";
 import BasicSelect from "./BasicSelect";
 import FreeSoloCreateOption from "./FreeSoloCreateOption";
-import BasicSort from "./BasicSort";
 
 function Header(props) {
   return (

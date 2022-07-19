@@ -6,7 +6,6 @@ import { useContext } from "react";
 
 function Card(props) {
   const {
-    products,
     productsCart,
     setProductsCart,
     cart,
@@ -30,13 +29,13 @@ function Card(props) {
   }
   return (
     <div className="card">
-      <img className="card-img" src={props.img}></img>
+      <img className="card-img" src={props.img} alt=""></img>
       <div className="card-body">
         <h2 className="card-title"> {props.name} </h2>
         {props.console === "all" ? (
-          <img className="console-img-all" src={props.imgconsole}></img>
+          <img className="console-img-all" src={props.imgconsole} alt=""></img>
         ) : (
-          <img className="console-img" src={props.imgconsole}></img>
+          <img className="console-img" src={props.imgconsole} alt=""></img>
         )}
 
         <h3 className="card-price">{props.price + "$"}</h3>

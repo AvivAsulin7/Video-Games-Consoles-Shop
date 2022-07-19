@@ -1,12 +1,7 @@
 import React, { useContext } from "react";
 import "./Console.css";
 import { Link } from "react-router-dom";
-import { styled } from "@mui/system";
 import ProductsContext from "../../contexts/ProductsContext";
-
-const CustomLink = styled(Link)({
-  width: "100%",
-});
 
 function Console(props) {
   const { filterProduct } = useContext(ProductsContext);
@@ -19,6 +14,7 @@ function Console(props) {
             <Link to="/products">
               <img
                 src={item.img}
+                alt=""
                 onClick={() => filterProduct(item.console, "console")}
               ></img>
             </Link>

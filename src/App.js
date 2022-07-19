@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+// import { useEffect } from "react";
 import "./App.css";
 import Console from "./components/Consoles/Console";
 import Footer from "./components/Footer/Footer";
@@ -13,7 +14,7 @@ import ProductsContext from "./contexts/ProductsContext";
 import Cart from "./components/Cart/Cart";
 
 function App() {
-  const [products, setProducts] = useState([
+  const products = [
     {
       id: 1,
       name: "FIFA 22",
@@ -374,9 +375,9 @@ function App() {
       img: "https://s2.gaming-cdn.com/images/products/7318/orig-fallback-v1/efootball-2022-pc-game-steam-cover.jpg?v=1632993144",
       price: 49.99,
     },
-  ]);
+  ];
 
-  const [consoles, setConsoles] = useState([
+  const consoles = [
     {
       id: 1,
       name: "Nintendo",
@@ -401,7 +402,7 @@ function App() {
       img: "https://i.postimg.cc/fTSvz6H1/xbox.png",
       price: 999.9,
     },
-  ]); // for 3 consoles,to console component
+  ]; // for 3 consoles,to console component
 
   // const [products, setProducts] = useState([]);
   const [updateproducts, setUpdateproducts] = useState(products); // for the filter
@@ -432,7 +433,7 @@ function App() {
         )
       );
     else if (x === "name")
-      setUpdateproducts(products.filter((item) => item.name == choose));
+      setUpdateproducts(products.filter((item) => item.name === choose));
   };
 
   const sortProducts = () => {
