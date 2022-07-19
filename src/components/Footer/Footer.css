@@ -1,0 +1,21 @@
+.footer {
+    text-align: center;
+    padding: 3rem;
+    background-color: #2C394B;
+    color: #ccc;
+  }
+
+  .footer h2 {
+    margin: 1.5rem 0;
+    font-family: 'Finlandica', sans-serif;
+    font-size: 2rem;
+  }
+
+  .icons {
+    margin-top: 2rem;
+  }
+
+  .icon:hover {
+    color: #495C83;
+    transition: all .3s ease-in-out
+  }

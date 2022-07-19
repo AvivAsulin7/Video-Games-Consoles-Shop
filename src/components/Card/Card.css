@@ -1,0 +1,169 @@
+.card {
+    box-shadow: 0 0 7px 1px;
+    display: flex;
+    min-width: 28rem;
+    height: 15rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2C394B;
+}
+
+/* .card:hover{
+    transform: scale(1.1);
+    transition: transform 1s;
+} */
+
+img {
+    width: 14rem;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    margin: 0.8rem;
+}
+
+/* .card-body img {
+    width: 19%;
+    height: 20%;
+} */
+
+.card-title {
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-bottom: 0.9rem;
+}
+
+.card-price {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.card-btn {
+    border: none;
+    border-top:  1px solid;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    color: inherit;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    transition: transform 1s;
+    overflow: hidden;
+    transform: scale(1.1);
+    /* z-index: 2; */
+    color: #FF6701;  /* F0A500 */
+}
+
+.console-img-all {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 2px;
+
+}
+
+.console-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 2px;
+
+}
+
+@media screen and (min-width:600px) and (max-width:1400px) {   /* MEDIUM SCREEN 1800 or 1600 or 1400 */
+    .card {
+        flex-direction: column;
+        text-align: center;
+        min-width: 14rem;
+        min-height: 20rem;
+        height: inherit;
+    }
+
+    .card:hover{
+        transform: scale(1.1);
+        transition: transform 1s;
+    }
+
+    .card-img {
+        width: 100%;
+        height: 14rem;   /*12rem */
+        object-fit: fill;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        line-height: 0.7rem;
+    }
+
+    .console-img-all{
+        margin: 0;
+    }
+
+    .console-img {
+        margin: 0;
+        height: auto;
+    }
+
+    .card-price {
+        margin-top: 0.2rem;
+        font-size: 1rem;
+    }
+
+    .card-btn {
+        font-size: 0.8rem;
+        padding-top: 0.8rem;
+    }
+}
+
+
+@media screen and (min-width:1400px) {   /* BIG SCREEN   1800 or 1600 or 1400 */
+    .card {
+        flex-direction: column;
+        text-align: center;
+        min-width: 14rem;
+        min-height: 20rem;
+        height: inherit;
+    }
+
+    .card:hover{
+        transform: scale(1.1);
+        transition: transform 1s;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;   /*12rem */
+    }
+
+    .card-price {
+        margin-top: 0.6rem;
+        font-size: 1.4rem;
+    }
+
+    
+.card-title {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.card-btn {
+    border: none;
+    border-top:  1px solid;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    color: inherit;
+    cursor: pointer;
+}
+
+}

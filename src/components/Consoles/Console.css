@@ -1,0 +1,69 @@
+.what-you-play {
+    background-color: rgb(20, 12, 18);
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+    text-align: center;
+}
+
+.what-you-play h1 {
+    margin-bottom: 5rem;
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.the-consoles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.the-consoles img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.the-consoles img:hover {
+    transition: transform 1s;
+    overflow: hidden;
+    transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+@media screen and (min-width:600px) and (max-width:1600px) {
+    .what-you-play {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+.what-you-play h1 {
+    margin-bottom: 5rem;
+    font-size: 1.7rem;
+}
+
+.the-consoles img {
+    width: 10rem;
+    border-radius: 40px;
+}
+
+}
+
+@media screen and (max-width:600px) {
+.what-you-play {
+    padding-top: 4rem;
+     padding-bottom: 5rem;
+}
+    
+.what-you-play h1 {
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+}
+
+.the-consoles img {
+    width: 7.5rem;
+    border-radius: 40px;
+}
+
+}

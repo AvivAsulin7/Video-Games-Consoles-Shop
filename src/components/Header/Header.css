@@ -1,0 +1,27 @@
+.games {
+    padding: 3rem 2rem 0;   
+    display: flex;
+    flex-direction: row;
+    background-color: #2C394B;
+}
+
+.product-filter {
+    display: flex;
+    padding: 30px;
+  }
+  
+  .sort-filter-search {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .sort-filter-search div {
+    padding-right: 10px;
+  }
+
+  @media screen  and (max-width:600px) {
+    .product-filter {
+      padding: 10px 5px;
+    }
+  
+  }

@@ -1,0 +1,24 @@
+.store {
+    padding: 12rem 5rem ;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    background-image: url(https://www.wallpaperflare.com/static/556/560/946/artwork-game-consoles-controllers-wallpaper.jpg);
+    background-repeat: repeat;
+    background-size: 50rem;
+}
+
+@media screen and (min-width:1300px) {   /* BIG SCREEN */
+    .store {
+        grid-template-columns: repeat(auto-fit,minmax(14rem,16rem));
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:1300px){    /* MEDIUM SCREEN */
+    .store {
+        grid-template-columns: repeat(auto-fit,minmax(8rem,13.5rem));
+    }
+
+} 
+
