@@ -17,9 +17,8 @@ body {
   /* margin: 7rem auto; */
   padding: 12rem 0;
   text-align: center;
-  /* background-image: url(https://cdn.realsport101.com/images/ncavvykf/realsport-production/4ef1fbda64e7a89fd3645ee8c2ea23630b403901-1280x720.png?rect=0,0,1279,720&w=700&h=394&dpr=2);
-  animation: change 100s infinite ease-in-out; */
-  background-color: blue;
+  background-image: url(/images/wwe2k12.png);
+  animation: change 100s infinite ease-in-out;
   -webkit-text-stroke: 1.5px black;
 }
 
@@ -68,28 +67,24 @@ input {
 }
 
 
-/* @keyframes change {
+@keyframes change {
   0%
   {
-      background-image: url(https://image.api.playstation.com/vulcan/img/rnd/202111/0822/YiFF5Xkljek03HhUJa4gic1Y.png);
+      background-image: url(/images/fifa22.png);
   }
-  20%
+  30%
   {
-       background-image: url(https://cdn1.epicgames.com/offer/52f57f57120c440fad9bfa0e6c279317/EGS_Battlefield2042_DICE_S1_2560x1440-36f16374c9c29a18a46872795b483d72_2560x1440-36f16374c9c29a18a46872795b483d72);  
+       background-image: url(/images/EGS_Battlefield2042_DICE_S1_2560x1440-36f16374c9c29a18a46872795b483d72_2560x1440-36f16374c9c29a18a46872795b483d72.png);  
   }
-  40%
+  50%
   {
-       background-image: url(https://assets.2k.com/1a6ngf98576c/6Oxh4KWRKnoG8NCiYBUjtB/5b699b4b4a2e1de02687d88963aa2548/2k22_Meta-image_1.jpg);
+      background-image: url(/images/horizon.png);
   }
-  60%
+  75%
   {
-      background-image: url(https://cdn.thetealmango.com/wp-content/uploads/2022/02/GoW-Ragnarok.jpg);
+      background-image: url(/images/god\ of\ war.png);
   }
-  80%
-  {
-      background-image: url(https://image.api.playstation.com/vulcan/ap/rnd/202107/3100/HO8vkO9pfXhwbHi5WHECQJdN.png);
-  }
-} */
+}
 
 
 @media screen and (min-width:600px) and (max-width:1400px){      /* 1500 or 1600 ore 1800 */
