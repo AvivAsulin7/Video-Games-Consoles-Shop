@@ -3,7 +3,7 @@ import "./Header.css";
 import BasicSelect from "./BasicSelect";
 import FreeSoloCreateOption from "./FreeSoloCreateOption";
 
-function Header(props) {
+function Header() {
   return (
     <div className="games">
       <nav className="product-filter">
@@ -14,9 +14,6 @@ function Header(props) {
           <div>
             <BasicSelect />
           </div>
-          {/* <div>
-            <BasicSort />
-          </div> */}
         </div>
       </nav>
     </div>

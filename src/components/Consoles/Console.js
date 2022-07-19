@@ -9,10 +9,11 @@ function Console(props) {
     <div className="what-you-play">
       <h1>What's your console ?..</h1>
       <div className="the-consoles">
-        {props.consoles.map((item, index) => {
+        {props.consoles.map((item) => {
           return (
-            <Link to="/products">
+            <Link to="/products" key={item.id}>
               <img
+                key={item.id}
                 src={item.img}
                 alt=""
                 onClick={() => filterProduct(item.console, "console")}

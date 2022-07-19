@@ -1,55 +1,61 @@
 import React from "react";
-import { AppBar, Toolbar, Tabs, Tab } from "@mui/material";
+import { AppBar, Toolbar, Button } from "@mui/material";
 import CustomizedBadges from "./CustomizedBadges";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/system";
 import "./Navbar.css";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 
-const CustomLink = styled(Link)({
+const CustomButton = styled(Button)({
   color: "#fff",
-  textDecoration: "none",
+  padding: "0 20px 20px",
   "&:hover": {
     color: "#FF6701",
     transition: "all .3s ease-in-out",
   },
 });
 
+const CustomLink = styled(Link)({
+  textDecoration: "none",
+});
+
 function Navbar() {
   return (
     <AppBar sx={{ background: "#040303" }}>
       <Toolbar>
-        <Tabs textColor="inherit">
+        <div className="nav">
           <SportsEsportsIcon
-            sx={{ margin: "auto" }}
+            sx={{ margin: "10px 5px 0" }}
             fontSize="large"
           ></SportsEsportsIcon>
-
           <CustomLink to="/">
-            <Tab label="HOME"></Tab>
+            <CustomButton>Home</CustomButton>
           </CustomLink>
           <CustomLink to="/products">
-            <Tab label="PRODUCTS"></Tab>
+            <CustomButton>Products</CustomButton>
           </CustomLink>
           <CustomLink to="/upcominggames">
-            <Tab label="Upcoming games"></Tab>
+            <CustomButton>upcoming games</CustomButton>
           </CustomLink>
-        </Tabs>
-        <div style={{ marginLeft: "1rem" }}>
+        </div>
+        <div style={{ marginLeft: "1rem", marginBottom: "0.5rem" }}>
           <CustomizedBadges />
         </div>
 
-        {/* <Button
-          sx={{ marginLeft: "auto" }}
-          textColor="inherit"
+        <CustomButton
+          sx={{ marginLeft: "auto", marginTop: "auto" }}
           variant="contained"
           color="grey"
         >
           Login
-        </Button>
-        <Button sx={{ marginLeft: "1rem" }} variant="contained" color="grey">
+        </CustomButton>
+        <CustomButton
+          sx={{ marginLeft: "1rem", marginTop: "auto" }}
+          variant="contained"
+          color="grey"
+        >
           SignUp
-        </Button> */}
+        </CustomButton>
       </Toolbar>
     </AppBar>
   );

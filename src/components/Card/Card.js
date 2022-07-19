@@ -28,7 +28,7 @@ function Card(props) {
     setTotalPrice(Math.round(totalPrice + props.price));
   }
   return (
-    <div className="card">
+    <div className="card" key={props.id}>
       <img className="card-img" src={props.img} alt=""></img>
       <div className="card-body">
         <h2 className="card-title"> {props.name} </h2>

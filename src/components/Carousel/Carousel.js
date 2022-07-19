@@ -14,8 +14,6 @@ function Carousel({ slides }) {
     setCurrent(current === 0 ? length - 1 : current - 1);
   }
 
-  console.log(current);
-
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
@@ -37,6 +35,7 @@ function Carousel({ slides }) {
               {index === current && (
                 <img src={slide.img} className="img-slider" alt=""></img>
               )}
+              key={index}
             </div>
           );
         })}
