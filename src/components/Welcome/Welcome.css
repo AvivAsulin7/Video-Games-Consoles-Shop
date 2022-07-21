@@ -17,7 +17,7 @@ body {
   /* margin: 7rem auto; */
   padding: 12rem 0;
   text-align: center;
-  background-image: url(/images/wwe2k12.png);
+  background-image: url(/public/images/god\ of\ war.png);
   animation: change 100s infinite ease-in-out;
   -webkit-text-stroke: 1.5px black;
 }
@@ -70,19 +70,15 @@ input {
 @keyframes change {
   0%
   {
-      background-image: url(/images/fifa22.png);
+      background-image: url(/public/images/fifa22.png);
   }
   30%
   {
-       background-image: url(/images/EGS_Battlefield2042_DICE_S1_2560x1440-36f16374c9c29a18a46872795b483d72_2560x1440-36f16374c9c29a18a46872795b483d72.png);  
+       background-image: url(/public/images/EGS_Battlefield2042_DICE_S1_2560x1440-36f16374c9c29a18a46872795b483d72_2560x1440-36f16374c9c29a18a46872795b483d72.png);  
   }
   50%
   {
-      background-image: url(/images/horizon.png);
-  }
-  75%
-  {
-      background-image: url(/images/god\ of\ war.png);
+      background-image: url(/public/images/horizon.png);
   }
 }
 
