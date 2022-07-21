@@ -5,10 +5,13 @@ import {
   Typography,
   Divider,
   Button,
+  // useMediaQuery,
 } from "@mui/material";
 import { useContext } from "react";
 import ProductsContext from "../../contexts/ProductsContext";
 import styled from "styled-components";
+// import { useTheme } from "@mui/material";
+import "./Cart.css";
 
 const CustomButton = styled(Button)({
   fontFamily: "Montserrat, sans-serif",
@@ -26,6 +29,9 @@ function Cart() {
     totalPrice,
     setTotalPrice,
   } = useContext(ProductsContext);
+
+  // const theme = useTheme();
+  // const matches = useMediaQuery(theme.breakpoints.down("md"));
 
   function removeProduct(item) {
     setCart(cart - 1);

@@ -79,7 +79,7 @@
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (min-width:500px) and (max-width:600px) {
     .img-slider {
         width: 380px;
         height: 100%;
@@ -93,5 +93,26 @@
     .right-arrow {
         right: 1px;
 
+    }
+}
+
+@media screen and (max-width:499px) {
+    .soon {
+        height: 40rem;
+    }
+    .img-slider {
+        width: 320px;
+        height: 80%;
+        margin-bottom: 80%;
+    }
+
+    .left-arrow {
+        left: 1px;
+        top: 25%;
+    }
+
+    .right-arrow {
+        right: 1px;
+        top: 25%;
     }
 }

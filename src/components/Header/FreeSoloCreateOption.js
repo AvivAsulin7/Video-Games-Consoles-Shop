@@ -8,7 +8,7 @@ const filter = createFilterOptions();
 
 export default function FreeSoloCreateOption(props) {
   const [value, setValue] = React.useState(null);
-  const { products, filterProduct } = useContext(ProductsContext);
+  const { updateproducts, filterProduct } = useContext(ProductsContext);
 
   return (
     <Autocomplete
@@ -27,24 +27,10 @@ export default function FreeSoloCreateOption(props) {
           setValue(newValue);
         }
         filterProduct(newValue.name, "name");
-        console.log(newValue.name);
       }}
       filterOptions={(options, params) => {
         const filtered = filter(options, params);
-        const { inputValue } = params;
         // Suggest the creation of a new value
-        const isExisting = options.some((option) => inputValue === option.name);
-        filtered.push({
-          inputValue,
-          name: `All`,
-        });
-
-        if (inputValue !== "" && !isExisting) {
-          filtered.push({
-            inputValue,
-            name: `Add "${inputValue}"`,
-          });
-        }
 
         return filtered;
       }}
@@ -52,7 +38,7 @@ export default function FreeSoloCreateOption(props) {
       clearOnBlur
       handleHomeEndKeys
       id="free-solo-with-text-demo"
-      options={products}
+      options={[{ name: "All Games" }, ...updateproducts]}
       getOptionLabel={(option) => {
         // Value selected with enter, right from the input
         if (typeof option === "string") {

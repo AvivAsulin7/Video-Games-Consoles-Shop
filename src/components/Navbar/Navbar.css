@@ -1,4 +1,17 @@
 .logo {
-    width: 25%;
+    max-width: 25%;
     padding-bottom: 2px;
+}
+
+@media screen and (min-width:1400px) {
+    .logo {
+    max-width: 12%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .logo {
+    max-width: 35%;
+    height: 20%;
+    }
 }

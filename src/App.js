@@ -278,7 +278,7 @@ function App() {
     },
     {
       id: 31,
-      name: "UNCHARTED: Legacy of Thieves Collection",
+      name: "UNCHARTED:Legacy of Thieves Collection",
       category: "game",
       console: "Sony Playstation",
       imgconsole: "https://i.postimg.cc/fbf9z6bt/1sony.png",
@@ -425,7 +425,7 @@ function App() {
   // }
 
   const filterProduct = (choose, x) => {
-    if (choose === "All") setUpdateproducts(products);
+    if (choose === "All" || choose === "All Games") setUpdateproducts(products);
     else if (x === "console")
       setUpdateproducts(
         products.filter(
@@ -436,20 +436,12 @@ function App() {
       setUpdateproducts(products.filter((item) => item.name === choose));
   };
 
-  const sortProducts = () => {
-    setUpdateproducts(
-      updateproducts.sort(function (a, b) {
-        return a.price - b.price;
-      })
-    );
-  };
-
   return (
     <ProductsContext.Provider
       value={{
         products,
         filterProduct,
-        sortProducts,
+        updateproducts,
         productsCart,
         setProductsCart,
         cart,

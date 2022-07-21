@@ -35,7 +35,6 @@ function Carousel({ slides }) {
               {index === current && (
                 <img src={slide.img} className="img-slider" alt=""></img>
               )}
-              key={index}
             </div>
           );
         })}

@@ -50,7 +50,7 @@
 
 }
 
-@media screen and (max-width:600px) {
+@media screen and (min-width:450px) and (max-width:600px) {
 .what-you-play {
     padding-top: 4rem;
      padding-bottom: 5rem;
@@ -65,5 +65,22 @@
     width: 7.5rem;
     border-radius: 40px;
 }
-
 }
+
+@media screen and (max-width:499px) {
+    .what-you-play {
+        padding-top: 4rem;
+         padding-bottom: 5rem;
+    }
+        
+    .what-you-play h1 {
+        margin-bottom: 5rem;
+        font-size: 1.5rem;
+    }
+    
+    .the-consoles img {
+        width: 6.5rem;
+        border-radius: 40px;
+    }
+    }
+    

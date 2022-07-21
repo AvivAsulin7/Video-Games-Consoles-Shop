@@ -39,7 +39,9 @@ function Card(props) {
         )}
 
         <h3 className="card-price">{props.price + "$"}</h3>
-        <HoverRating />
+        <div className="rating">
+          <HoverRating />
+        </div>
         <button className="card-btn" onClick={addProduct}>
           Add to Cart
         </button>

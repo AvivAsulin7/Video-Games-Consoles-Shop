@@ -7,7 +7,7 @@
 
 .product-filter {
     display: flex;
-    padding: 30px;
+    padding: 40px 30px 20px;
   }
   
   .sort-filter-search {
@@ -19,9 +19,30 @@
     padding-right: 10px;
   }
 
-  @media screen  and (max-width:600px) {
+  @media screen  and (min-width:500px) and (max-width:600px) {
     .product-filter {
-      padding: 10px 5px;
+      padding: 20px 5px;
     }
-  
+  }
+
+  @media screen  and (max-width:499px) {
+
+    .games {
+      padding: 2rem 2rem 0;  
+      justify-content: center; 
+  }
+
+    .product-filter {
+      padding: 24px 0;
+    }
+
+    .sort-filter-search {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .sort-filter-search div {
+      padding-top: 5px;
+    }
   }
