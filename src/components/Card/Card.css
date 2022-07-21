@@ -75,6 +75,11 @@ img {
 
 }
 
+.rating {
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (min-width:600px) and (max-width:1400px) {   /* MEDIUM SCREEN 1800 or 1600 or 1400 */
     .card {
         flex-direction: column;
@@ -144,12 +149,6 @@ img {
         margin-top: 0.6rem;
         font-size: 1.4rem;
     }
-
-    .rating {
-        display: flex;
-        justify-content: center;
-    }
-
     
 .card-title {
     font-size: 1.4rem;
@@ -186,10 +185,16 @@ img {
     }
     
     img {
-        width: 19rem;
-        height: 10.4rem;
-        object-fit: cover;
-    }
+        width: 10rem;
+        height: 12rem;
+        object-fit: fill;
+    } 
+
+    /* img {
+        width: 11rem;
+        height: 100%;
+        object-fit: fill;
+    } */
     
     .card-body {
         margin: 0.8rem;
@@ -243,10 +248,5 @@ img {
         height: 40px;
         border-radius: 20px;
         margin-right: 40px;
-    }
-
-    .rating {
-        display:none;
-        justify-content:none;
     }
 }

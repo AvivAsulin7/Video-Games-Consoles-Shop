@@ -2,6 +2,7 @@ import * as React from "react";
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
 import StarIcon from "@mui/icons-material/Star";
+import { useTheme, useMediaQuery } from "@mui/material";
 
 const labels = {
   0: "No Rating",
@@ -24,14 +25,16 @@ function getLabelText(value) {
 export default function HoverRating() {
   const [value, setValue] = React.useState(0);
   const [hover, setHover] = React.useState(-1);
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box
       sx={{
-        maxWidth: 170,
-        display: "flex",
+        maxWidth: matches ? 200 : 200,
+        fontSize: matches ? "0.8rem" : "1rem",
+        display: matches ? "block" : "flex",
         alignItems: "center",
-        fontSize: "0.85rem",
       }}
     >
       <Rating
@@ -45,7 +48,16 @@ export default function HoverRating() {
         onChangeActive={(event, newHover) => {
           setHover(newHover);
         }}
-        emptyIcon={<StarIcon style={{ opacity: 0.75 }} fontSize="inherit" />}
+        emptyIcon={
+          <StarIcon
+            style={{
+              opacity: 0.75,
+              width: matches ? "0.8rem" : null,
+              fontSize: matches ? "1rem" : null,
+            }}
+            fontSize="inherit"
+          />
+        }
       />
       {value !== null && (
         <Box sx={{ ml: 1 }}>{labels[hover !== -1 ? hover : value]}</Box>
