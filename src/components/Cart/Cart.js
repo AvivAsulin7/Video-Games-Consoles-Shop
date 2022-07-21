@@ -169,7 +169,7 @@ function Cart() {
             Your Cart is Empty !
           </h1>{" "}
           <img
-            src="https://o.remove.bg/downloads/3d99b7c9-5a01-482f-9898-f6c96f44181e/carEmpty-removebg-preview.png"
+            src="./images/emptyCart.png"
             alt=""
             style={{ width: "40%", margin: "auto", paddingBottom: "4rem" }}
           ></img>
