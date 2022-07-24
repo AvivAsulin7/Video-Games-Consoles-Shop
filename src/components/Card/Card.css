@@ -20,6 +20,8 @@ img {
 
 .card-body {
     margin: 0.8rem;
+    width: 100%;
+    text-align: center;
 }
 
 /* .card-body img {
@@ -89,6 +91,10 @@ img {
         height: inherit;
     }
 
+    .card-body {
+        width: auto;
+    }
+
     .card:hover{
         transform: scale(1.1);
         transition: transform 1s;
@@ -102,7 +108,7 @@ img {
 
     .card-title {
         font-size: 1rem;
-        line-height: 0.7rem;
+        line-height: 1rem;
     }
 
     .console-img-all{
@@ -138,6 +144,10 @@ img {
     .card:hover{
         transform: scale(1.1);
         transition: transform 1s;
+    }
+
+    .card-body {
+        width: auto;
     }
 
     img {
@@ -198,7 +208,6 @@ img {
     
     .card-body {
         margin: 0.8rem;
-        
     }
     
     .card-title {

@@ -19,8 +19,4 @@ export const SliderData = [
     id: 5,
     img: "./images/marvel.jpg",
   },
-  {
-    id: 6,
-    img: "./images/overwatch.jpg",
-  },
 ];
