@@ -33,7 +33,25 @@ function Card(props) {
       <div className="card-body">
         <h2 className="card-title"> {props.name} </h2>
         {props.console === "all" ? (
-          <img className="console-img-all" src={props.imgconsole} alt=""></img>
+          <>
+            {/* <div>
+              {" "}
+              <img src="./images/1sony.png"></img>{" "}
+              <img src="./images/1xbox.png"></img>{" "}
+              <img src="./images/ninetendo.png"></img>{" "}
+            </div> */}
+            <img
+              className="console-img-all"
+              src={props.imgconsole}
+              alt=""
+            ></img>
+            {/* <select style={{ marginTop: "1rem" }}>
+              <option>Console</option>
+              <option>Sony playstation</option>
+              <option>Xbox</option>
+              <option>Ninetendo</option>
+            </select> */}
+          </>
         ) : (
           <img className="console-img" src={props.imgconsole} alt=""></img>
         )}
