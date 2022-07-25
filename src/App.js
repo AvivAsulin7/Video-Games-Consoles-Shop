@@ -1,6 +1,5 @@
 import { useState } from "react";
 // import { useEffect } from "react";
-import { Helmet } from "react-helmet";
 import "./App.css";
 import Console from "./components/Consoles/Console";
 import Footer from "./components/Footer/Footer";
@@ -614,11 +613,6 @@ function App() {
       }}
     >
       <Router>
-        {/* <Helmet>
-          <meta charSet="utf-8" />
-          <title>Video Games Shop</title>
-          <link rel="canonical" href="http://mysite.com/example" />
-        </Helmet> */}
         <Navbar />
         <Cart></Cart>
         <Routes>
