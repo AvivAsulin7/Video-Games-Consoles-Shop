@@ -57,7 +57,6 @@ img {
     transition: transform 1s;
     overflow: hidden;
     transform: scale(1.1);
-    /* z-index: 2; */
     color: #FF6701;  /* F0A500 */
 }
 
@@ -66,7 +65,17 @@ img {
     height: 40px;
     border-radius: 20px;
     margin: 2px;
+}
 
+
+.choose-console {
+   margin: 0;
+   padding: 0;
+}
+
+
+.choose-console img {
+    cursor: pointer;
 }
 
 .console-img {
@@ -74,8 +83,19 @@ img {
     height: 40px;
     border-radius: 20px;
     margin: 2px;
-
 }
+
+.console-img-pressed {
+ 
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 2px;
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+}
+
+
 
 .rating {
     display: flex;

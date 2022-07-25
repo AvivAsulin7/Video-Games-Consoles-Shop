@@ -9,11 +9,16 @@ function Games(props) {
         return (
           <Card
             key={item.id}
+            id={item.id}
             name={item.name}
             img={item.img}
             price={item.price}
             console={item.console}
             imgconsole={item.imgconsole}
+            select={item.select}
+            countSony={item.countSony}
+            countXbox={item.countXbox}
+            countNinetendo={item.countNinetendo}
           ></Card>
         );
       })}

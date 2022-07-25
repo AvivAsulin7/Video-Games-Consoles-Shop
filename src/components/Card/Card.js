@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 import HoverRating from "./HoverRating";
 import ProductsContext from "../../contexts/ProductsContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 function Card(props) {
   const {
@@ -14,18 +14,47 @@ function Card(props) {
     setTotalPrice,
   } = useContext(ProductsContext);
 
+  const [markChoose, setMarkChoose] = useState("");
+
   function addProduct() {
-    setCart(cart + 1);
-    const newProduct = {
-      id: props.id,
-      name: props.name,
-      img: props.img,
-      price: props.price,
-      console: props.console,
-      imgconsole: props.imgconsole,
-    };
-    setProductsCart([...productsCart, newProduct]);
-    setTotalPrice(Math.round(totalPrice + props.price));
+    if (markChoose === "" && props.console === "all")
+      alert("Please Select Console");
+    else {
+      let x = 0;
+      if (markChoose === "Sony Playstation") x = props.countSony;
+      else if (markChoose === "Xbox") x = props.countXbox;
+      else x = props.countNinetendo;
+
+      const newProduct = {
+        id: props.id,
+        name: props.name,
+        img: props.img,
+        price: props.price,
+        console: props.console,
+        imgconsole: props.imgconsole,
+        select: markChoose,
+        count: x + 1,
+      };
+      const found = productsCart.find(
+        (item) => item.id === props.id && item.select === markChoose
+      );
+      console.log(props.select);
+
+      if (!found) {
+        setProductsCart([...productsCart, newProduct]);
+        setCart(cart + 1);
+      } else {
+        setProductsCart(
+          productsCart.map((item) =>
+            item.id === found.id && item.select === markChoose
+              ? { ...item, count: item.count + 1 }
+              : item
+          )
+        );
+      }
+      console.log(productsCart);
+      setTotalPrice(Math.round(totalPrice + props.price));
+    }
   }
   return (
     <div className="card" key={props.id}>
@@ -34,17 +63,42 @@ function Card(props) {
         <h2 className="card-title"> {props.name} </h2>
         {props.console === "all" ? (
           <>
-            {/* <div>
-              {" "}
-              <img src="./images/1sony.png"></img>{" "}
-              <img src="./images/1xbox.png"></img>{" "}
-              <img src="./images/ninetendo.png"></img>{" "}
-            </div> */}
-            <img
+            <div className="choose-console">
+              <h4>Select Console:</h4>
+              <img
+                className={
+                  markChoose === "Sony Playstation"
+                    ? "console-img"
+                    : "console-img-pressed"
+                }
+                src="./images/1sony.png"
+                alt=""
+                onClick={() => setMarkChoose("Sony Playstation")}
+              ></img>{" "}
+              <img
+                className={
+                  markChoose === "Xbox" ? "console-img" : "console-img-pressed"
+                }
+                src="./images/1xbox.png"
+                alt=""
+                onClick={() => setMarkChoose("Xbox")}
+              ></img>{" "}
+              <img
+                className={
+                  markChoose === "Ninetendo"
+                    ? "console-img"
+                    : "console-img-pressed"
+                }
+                src="./images/ninetendo.png"
+                alt=""
+                onClick={() => setMarkChoose("Ninetendo")}
+              ></img>{" "}
+            </div>
+            {/* <img
               className="console-img-all"
               src={props.imgconsole}
               alt=""
-            ></img>
+            ></img> */}
             {/* <select style={{ marginTop: "1rem" }}>
               <option>Console</option>
               <option>Sony playstation</option>

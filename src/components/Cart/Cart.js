@@ -11,6 +11,7 @@ import { useContext } from "react";
 import ProductsContext from "../../contexts/ProductsContext";
 import styled from "styled-components";
 import { useTheme } from "@mui/material";
+import "./Cart.css";
 
 const CustomButton = styled(Button)({
   fontFamily: "Montserrat, sans-serif",
@@ -34,8 +35,42 @@ function Cart() {
 
   function removeProduct(item) {
     setCart(cart - 1);
-    setTotalPrice(Math.round(totalPrice - item.price));
+    setTotalPrice(Math.round(totalPrice - item.count * item.price));
     setProductsCart(productsCart.filter((i) => i !== item));
+  }
+
+  function UsePlus(item) {
+    const found = productsCart.find(
+      (product) => product.id === item.id && product.select === item.select
+    );
+    if (found) {
+      setProductsCart(
+        productsCart.map((product) =>
+          product.id === found.id && product.select === found.select
+            ? { ...product, count: product.count + 1 }
+            : product
+        )
+      );
+    }
+    setTotalPrice(Math.round(totalPrice + item.price));
+  }
+
+  function UseMinus(item) {
+    const found = productsCart.find(
+      (product) => product.id === item.id && product.select === item.select
+    );
+    if (found) {
+      if (found.count > 1)
+        setProductsCart(
+          productsCart.map((product) =>
+            product.id === found.id && product.select === found.select
+              ? { ...product, count: product.count - 1 }
+              : product
+          )
+        );
+      else removeProduct(item);
+      setTotalPrice(Math.round(totalPrice - item.price));
+    }
   }
 
   return (
@@ -73,7 +108,7 @@ function Cart() {
               <Box key={index}>
                 <Box
                   display="flex"
-                  sx={{ pt: 7, pb: 2 }}
+                  sx={{ pt: 4, pb: 4 }}
                   alignItems="start"
                   justifyContent={"space-between"}
                   padding="10px"
@@ -83,7 +118,7 @@ function Cart() {
                     src={item.img}
                     sx={{ width: 96, height: 96, mr: 2 }}
                   ></Avatar>
-                  <Box display="flex" flexDirection={"column"}>
+                  <Box display="flex" flexDirection={"column"} sx={{ pr: 1.5 }}>
                     <Typography
                       variant="h6"
                       sx={{
@@ -94,12 +129,15 @@ function Cart() {
                       {item.name}
                     </Typography>
                     {item.console === "all" ? (
-                      <select style={{ marginTop: "1rem" }}>
-                        <option>Console</option>
-                        <option>Sony playstation</option>
-                        <option>Xbox</option>
-                        <option>Ninetendo</option>
-                      </select>
+                      <Typography
+                        variant="h7"
+                        sx={{
+                          fontSize: matches ? "0.8rem" : null,
+                          paddingTop: matches ? "0.3rem" : null,
+                        }}
+                      >
+                        For {item.select}
+                      </Typography>
                     ) : (
                       <Typography
                         variant="h7"
@@ -111,9 +149,29 @@ function Cart() {
                         For {item.console}{" "}
                       </Typography>
                     )}
+
+                    <Typography
+                      variant="h7"
+                      sx={{
+                        fontSize: matches ? "0.8rem" : null,
+                        paddingTop: matches ? "0.3rem" : null,
+                      }}
+                    >
+                      Price for each:{item.price}$
+                    </Typography>
                   </Box>
                   <Box>
-                    <Typography variant="body1">${item.price}</Typography>
+                    <Typography
+                      variant="body1"
+                      sx={{ display: "flex", justifyContent: "center" }}
+                    >
+                      ${Math.round(item.price * item.count)}
+                    </Typography>
+                    <div className="buttons">
+                      <button onClick={() => UseMinus(item)}>-</button>
+                      <button>{item.count}</button>
+                      <button onClick={() => UsePlus(item)}>+</button>
+                    </div>
                     <Box sx={{ pt: 4 }}>
                       <CustomButton
                         variant="contained"

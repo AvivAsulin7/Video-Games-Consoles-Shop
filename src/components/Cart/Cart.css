@@ -1,0 +1,15 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.buttons button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Merriweather', serif;
+}
