@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 
 function Card(props) {
   const {
+    updateproducts,
     productsCart,
     setProductsCart,
     cart,
@@ -20,11 +21,6 @@ function Card(props) {
     if (markChoose === "" && props.console === "all")
       alert("Please Select Console");
     else {
-      let x = 0;
-      if (markChoose === "Sony Playstation") x = props.countSony;
-      else if (markChoose === "Xbox") x = props.countXbox;
-      else x = props.countNinetendo;
-
       const newProduct = {
         id: props.id,
         name: props.name,
@@ -33,12 +29,11 @@ function Card(props) {
         console: props.console,
         imgconsole: props.imgconsole,
         select: markChoose,
-        count: x + 1,
+        count: 1,
       };
       const found = productsCart.find(
         (item) => item.id === props.id && item.select === markChoose
       );
-      console.log(props.select);
 
       if (!found) {
         setProductsCart([...productsCart, newProduct]);
@@ -52,9 +47,9 @@ function Card(props) {
           )
         );
       }
-      console.log(productsCart);
       setTotalPrice(Math.round(totalPrice + props.price));
     }
+    console.log(updateproducts);
   }
   return (
     <div className="card" key={props.id}>
