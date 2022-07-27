@@ -73,6 +73,7 @@ img {
     height: 40px;
     border-radius: 20px;
     margin: 2px;
+    cursor: pointer;
 }
 
 .console-img-pressed {
@@ -82,6 +83,8 @@ img {
     margin: 2px;
     box-shadow: 0 3px 4px 0 #DBEDF3;
     opacity: 0.5;
+    cursor: pointer;
+
 }
 
 
