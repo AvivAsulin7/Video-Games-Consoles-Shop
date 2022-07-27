@@ -12,6 +12,7 @@ import ProductsContext from "../../contexts/ProductsContext";
 import styled from "styled-components";
 import { useTheme } from "@mui/material";
 import "./Cart.css";
+import React from "react";
 
 const CustomButton = styled(Button)({
   fontFamily: "Montserrat, sans-serif",

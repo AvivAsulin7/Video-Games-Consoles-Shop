@@ -86,6 +86,8 @@ input {
 @media screen and (min-width:600px) and (max-width:1400px){      /* 1500 or 1600 ore 1800 */
   .container {
     padding: 9rem 0;
+    background-size: 95%;
+
   }
 
   .container h1 {

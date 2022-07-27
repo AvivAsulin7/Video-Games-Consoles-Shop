@@ -1,7 +1,8 @@
+import React from "react";
 import { useState } from "react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import "./App.css";
-import Console from "./components/Consoles/Console";
+import Console from "./components/Console/Console";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Welcome from "./components/Welcome/Welcome";
@@ -237,7 +238,7 @@ function App() {
     },
     {
       id: 23,
-      name: "Call of Duty® Vanguard",
+      name: "Call of Duty Vanguard",
       category: "game",
       console: "all",
       imgconsole: "https://i.postimg.cc/yxkgTxyc/all.png",
@@ -327,7 +328,7 @@ function App() {
     },
     {
       id: 33,
-      name: "MARIO STRIKERS: BATTLE LEAGUE FOOTBALL",
+      name: "MARIO STRIKERS: BATTLE FOOTBALL",
       category: "game",
       console: "Ninetendo",
       imgconsole: "https://i.postimg.cc/sXnGS773/ninetendo.png",
@@ -357,7 +358,7 @@ function App() {
     },
     {
       id: 36,
-      name: "Fire Emblem Warriors: Three Hopes",
+      name: "Fire Emblem Warriors",
       category: "game",
       console: "Ninetendo",
       imgconsole: "https://i.postimg.cc/sXnGS773/ninetendo.png",
@@ -444,10 +445,10 @@ function App() {
     },
   ]; // for 3 consoles,to console component
 
-  // const [products, setProducts] = useState([]);
-  const [updateproducts, setUpdateproducts] = useState(products); // for the filter
+  // const [products, setProducts] = useState([]); //original array
+  const [updateproducts, setUpdateproducts] = useState(products); // for the filter | without server - usestate([products]);
   const [productsCart, setProductsCart] = useState([]); // for the Cart
-  const [cart, setCart] = useState(0);
+  const [cart, setCart] = useState(0); // amount of types products in  the cart
   const [showCart, setShowCart] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
 

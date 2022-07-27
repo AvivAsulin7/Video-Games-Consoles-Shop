@@ -6,7 +6,6 @@ import { useContext, useState } from "react";
 
 function Card(props) {
   const {
-    updateproducts,
     productsCart,
     setProductsCart,
     cart,
@@ -49,7 +48,6 @@ function Card(props) {
       }
       setTotalPrice(Math.round(totalPrice + props.price));
     }
-    console.log(updateproducts);
   }
   return (
     <div className="card" key={props.id}>
@@ -58,7 +56,7 @@ function Card(props) {
         <h2 className="card-title"> {props.name} </h2>
         {props.console === "all" ? (
           <>
-            <div className="choose-console">
+            <>
               <h4>Select Console:</h4>
               <img
                 className={
@@ -88,21 +86,12 @@ function Card(props) {
                 alt=""
                 onClick={() => setMarkChoose("Ninetendo")}
               ></img>{" "}
-            </div>
-            {/* <img
-              className="console-img-all"
-              src={props.imgconsole}
-              alt=""
-            ></img> */}
-            {/* <select style={{ marginTop: "1rem" }}>
-              <option>Console</option>
-              <option>Sony playstation</option>
-              <option>Xbox</option>
-              <option>Ninetendo</option>
-            </select> */}
+            </>
           </>
         ) : (
-          <img className="console-img" src={props.imgconsole} alt=""></img>
+          <div className="choose-console">
+            <img className="console-img" src={props.imgconsole} alt=""></img>
+          </div>
         )}
 
         <h3 className="card-price">{props.price + "$"}</h3>
