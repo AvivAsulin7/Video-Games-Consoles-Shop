@@ -8,9 +8,9 @@ import {
 } from "@mui/material";
 import CustomizedBadges from "./CustomizedBadges";
 import { Link } from "react-router-dom";
-import { styled } from "@mui/system";
 import "./Navbar.css";
 import DrawerNav from "./DrawerNav";
+import { styled } from "@mui/system";
 
 const CustomButton = styled(Button)({
   color: "#fff",

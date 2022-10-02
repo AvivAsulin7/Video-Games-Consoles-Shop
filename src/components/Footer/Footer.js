@@ -17,13 +17,22 @@ function Footer() {
       <h2>Contact Us</h2>
       <div className="icons">
         <a href="https://www.facebook.com/aviv.asulin.9">
-          <FacebookIcon sx={{ mr: 4, fontSize: "40px", color: "#ccc" }} className="icon" />
+          <FacebookIcon
+            sx={{ mr: 4, fontSize: "40px", color: "#ccc" }}
+            className="icon"
+          />
         </a>
         <a href="https://github.com/AvivAsulin7">
-          <GitHubIcon sx={{ mr: 4, fontSize: "40px", color: "#ccc" }} className="icon" />
+          <GitHubIcon
+            sx={{ mr: 4, fontSize: "40px", color: "#ccc" }}
+            className="icon"
+          />
         </a>
         <a href="https://www.linkedin.com/in/avivassulin/">
-          <LinkedInIcon sx={{ fontSize: "40px", color: "#ccc" }} className="icon" />
+          <LinkedInIcon
+            sx={{ fontSize: "40px", color: "#ccc" }}
+            className="icon"
+          />
         </a>
       </div>
     </div>
